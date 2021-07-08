@@ -1,11 +1,17 @@
-<template lang="">
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+<template>
+  <div class="app">
+    <MasterHeader />
     <router-view />
   </div>
 </template>
+<script>
+import MasterHeader from './components/Header.vue';
+export default {
+  name: 'App',
+  components: {
+    MasterHeader,
+  },
+};
+</script>
 
 <style></style>
