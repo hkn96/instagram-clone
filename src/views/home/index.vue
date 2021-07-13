@@ -1,38 +1,53 @@
 <template>
   <div class="home">
-    <h1>Home</h1>
-    <CustomText class="a1">Hallo Welt</CustomText>
-    <CustomText class="a2" tag="p" size="xsmall">Hallo Welt</CustomText>
-    <br />
-    <CustomText class="a3" tag="p" size="xxsmall">Hallo Welt</CustomText>
-    <br />
-    <br />
-    <IconHome />
+    <div class="timeline">
+      <h1>Home</h1>
+
+      <br />
+      <br />
+
+      <Post />
+
+      <br />
+      <br />
+      <br />
+    </div>
+
+    <div class="sidebar">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, eius
+        vero. Alias aut blanditiis commodi consectetur eligendi, et minima
+        officiis omnis optio pariatur quod quos repudiandae rerum sed tempora
+        voluptatibus?
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
-import CustomText from '../../components/CustomText.vue';
-import IconHome from '../../icons/home.svg';
-// @ is an alias to /src
-
+import Post from '@/components/Post';
 export default {
   name: 'Home',
-  components: {
-    CustomText,
-    IconHome,
-  },
+  components: { Post },
 };
 </script>
 
 <style scoped>
-.a1 {
-  color: rgb(var(--ba8));
+.home {
+  max-width: 605px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (--t) {
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr 295px;
+    grid-gap: 30px;
+  }
 }
-.a2 {
-  color: var(--b3f);
-}
-.a3 {
-  color: var(--ba8);
+.sidebar {
+  display: none;
+  @media (--t) {
+    display: block;
+  }
 }
 </style>
