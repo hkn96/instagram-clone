@@ -44,7 +44,7 @@
     <!-- view count -->
 
     <div class="view-count section">
-      <custom-text tag="b">1.345 beğenme</custom-text>
+      <custom-text tag="b">1.345 likes</custom-text>
     </div>
 
     <!-- comment list -->
